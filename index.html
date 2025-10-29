@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نظام New Graphic ERP - نظام تخطيط موارد المؤسسات المتكامل لشركات الطباعة والدعاية والإعلان">
+    <meta name="keywords" content="ERP, نظام إدارة, طباعة, دعاية, إعلان, محاسبة">
+    <title>New Graphic ERP - نظام تخطيط موارد المؤسسات</title>
+    
+    <!-- Bootstrap RTL CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts - Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+        
+        .hero {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-desc {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .docs-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .doc-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block;
+        }
+        
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            color: white;
+        }
+        
+        .doc-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .doc-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .doc-desc {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .tech-badge {
+            background: #f0f0f0;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            color: white;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .btn-custom {
+            background: white;
+            color: #667eea;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255,255,255,0.3);
+            color: #667eea;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 3rem;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="text-center">
+                <div class="logo">
+                    <i class="bi bi-grid-3x3-gap"></i> New Graphic ERP
+                </div>
+                <p class="tagline">
+                    نظام تخطيط موارد المؤسسات المتكامل لشركات الطباعة والدعاية والإعلان
+                </p>
+                <div class="tech-stack justify-content-center">
+                    <span class="tech-badge"><i class="bi bi-code-slash"></i> Laravel 10.x</span>
+                    <span class="tech-badge"><i class="bi bi-bootstrap"></i> Vue.js 3</span>
+                    <span class="tech-badge"><i class="bi bi-database"></i> MySQL 8.x</span>
+                    <span class="tech-badge"><i class="bi bi-shield-check"></i> آمن ومشفر</span>
+                    <span class="tech-badge"><i class="bi bi-globe"></i> دعم RTL كامل</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">6</div>
+                <div class="stat-label">وحدات أساسية</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">جدول قاعدة بيانات</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">دعم اللغة العربية</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">قابل للتطوير</div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="docs-section">
+            <h2 class="text-center mb-4">الميزات الرئيسية</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-people"></i></div>
+                    <div class="feature-title">إدارة العملاء والمبيعات</div>
+                    <div class="feature-desc">
+                        إدارة بيانات العملاء، عروض الأسعار، وتحويلها لأوامر شغل تلقائياً
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-kanban"></i></div>
+                    <div class="feature-title">إدارة الإنتاج</div>
+                    <div class="feature-desc">
+                        لوحة Kanban لتتبع أوامر الشغل عبر جميع المراحل الإنتاجية
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-calculator"></i></div>
+                    <div class="feature-title">المحاسبة المتكاملة</div>
+                    <div class="feature-desc">
+                        دليل حسابات، قيود يومية تلقائية، وتقارير مالية شاملة
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-box-seam"></i></div>
+                    <div class="feature-title">إدارة المخزون</div>
+                    <div class="feature-desc">
+                        تتبع المواد الخام، تنبيهات المخزون المنخفض، والجرد الدوري
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-shield-lock"></i></div>
+                    <div class="feature-title">نظام الصلاحيات</div>
+                    <div class="feature-desc">
+                        تحكم دقيق في صلاحيات المستخدمين وسجل كامل للأنشطة
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-graph-up"></i></div>
+                    <div class="feature-title">لوحة التحكم والتقارير</div>
+                    <div class="feature-desc">
+                        مؤشرات الأداء، رسوم بيانية، ومولد تقارير مخصصة
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documentation Section -->
+        <div class="docs-section">
+            <h2 class="text-center mb-4">
+                <i class="bi bi-book"></i> الوثائق والأدلة
+            </h2>
+            <div class="docs-grid">
+                <a href="docs/user-manual.md" class="doc-card" target="_blank">
+                    <div class="doc-icon"><i class="bi bi-person-check"></i></div>
+                    <div class="doc-title">دليل المستخدم</div>
+                    <div class="doc-desc">
+                        دليل شامل باللغة العربية يشرح كيفية استخدام جميع وحدات النظام
+                    </div>
+                </a>
+                
+                <a href="docs/technical-docs.md" class="doc-card" target="_blank">
+                    <div class="doc-icon"><i class="bi bi-gear"></i></div>
+                    <div class="doc-title">الوثائق الفنية</div>
+                    <div class="doc-desc">
+                        تفاصيل البنية المعمارية، Models، Controllers، وأفضل الممارسات
+                    </div>
+                </a>
+                
+                <a href="docs/developer-guide.md" class="doc-card" target="_blank">
+                    <div class="doc-icon"><i class="bi bi-code-square"></i></div>
+                    <div class="doc-title">دليل التطوير</div>
+                    <div class="doc-desc">
+                        إعداد بيئة التطوير، معايير الكود، وكيفية إضافة ميزات جديدة
+                    </div>
+                </a>
+                
+                <a href="docs/api-docs.md" class="doc-card" target="_blank">
+                    <div class="doc-icon"><i class="bi bi-braces"></i></div>
+                    <div class="doc-title">API Documentation</div>
+                    <div class="doc-desc">
+                        توثيق كامل لجميع نقاط نهاية API مع أمثلة عملية
+                    </div>
+                </a>
+                
+                <a href="docs/deployment-guide.md" class="doc-card" target="_blank">
+                    <div class="doc-icon"><i class="bi bi-cloud-upload"></i></div>
+                    <div class="doc-title">دليل النشر</div>
+                    <div class="doc-desc">
+                        خطوات تفصيلية لنشر النظام على خادم الإنتاج وإعداده
+                    </div>
+                </a>
+                
+                <a href="database/schemas/database-schema.sql" class="doc-card" target="_blank">
+                    <div class="doc-icon"><i class="bi bi-database"></i></div>
+                    <div class="doc-title">Database Schema</div>
+                    <div class="doc-desc">
+                        مخطط قاعدة البيانات الكامل مع جميع الجداول والعلاقات
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Technology Stack -->
+        <div class="docs-section">
+            <h2 class="text-center mb-4">
+                <i class="bi bi-stack"></i> التقنيات المستخدمة
+            </h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="mb-3"><i class="bi bi-server"></i> Backend</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> <strong>PHP 8.x</strong> - لغة البرمجة</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> <strong>Laravel 10.x</strong> - إطار العمل</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> <strong>MySQL 8.x</strong> - قاعدة البيانات</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> <strong>Laravel Sanctum</strong> - المصادقة</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> <strong>Redis</strong> - التخزين المؤقت</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="mb-3"><i class="bi bi-laptop"></i> Frontend</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> <strong>Vue.js 3</strong> - إطار العمل</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> <strong>Pinia</strong> - إدارة الحالة</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> <strong>Vue Router</strong> - التوجيه</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> <strong>Bootstrap 5 RTL</strong> - التصميم</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> <strong>Vite</strong> - أداة البناء</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <div class="cta-title">
+                <i class="bi bi-rocket-takeoff"></i> ابدأ الآن
+            </div>
+            <p class="mb-4">نظام متكامل جاهز للاستخدام مع دعم فني لمدة 6 أشهر</p>
+            <div>
+                <a href="https://github.com/esraa222102044/esraa222102044.github.io" class="btn-custom" target="_blank">
+                    <i class="bi bi-github"></i> استعرض على GitHub
+                </a>
+                <a href="mailto:support@newgraphic.me" class="btn-custom">
+                    <i class="bi bi-envelope"></i> تواصل معنا
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p class="mb-2">
+                <strong>New Graphic ERP</strong> - نظام إدارة متكامل لشركات الطباعة والدعاية والإعلان
+            </p>
+            <p class="mb-2">
+                <i class="bi bi-envelope"></i> support@newgraphic.me
+                &nbsp;|&nbsp;
+                <i class="bi bi-globe"></i> <a href="https://newgraphic.me" class="text-white">newgraphic.me</a>
+            </p>
+            <p class="small opacity-75">
+                © 2024 New Graphic ERP. جميع الحقوق محفوظة.
+            </p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
